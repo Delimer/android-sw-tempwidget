@@ -9,10 +9,6 @@
         android:minSdkVersion="14"
         android:targetSdkVersion="19" />
 
-    <uses-feature
-        android:name="android.hardware.sensor.barometer"
-        android:required="true" />
-
     <uses-permission android:name="com.sonyericsson.extras.liveware.aef.EXTENSION_PERMISSION" />
 
     <application

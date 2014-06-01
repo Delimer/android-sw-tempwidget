@@ -9,8 +9,8 @@
     <ListPreference
         android:defaultValue="@string/pref_TempUnit_default"
         android:dialogTitle="@string/pref_TempUnit"
-        android:entries="@array/pref_BaroUnit_entries"
-        android:entryValues="@array/pref_BaroUnit_values"
+        android:entries="@array/pref_TempUnit_entries"
+        android:entryValues="@array/pref_TempUnit_values"
         android:key="temp_unit"
         android:title="@string/pref_TempUnit" />
 

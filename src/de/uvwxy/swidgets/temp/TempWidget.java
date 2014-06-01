@@ -135,8 +135,8 @@ class TempWidget extends BaseWidget {
 
     private void updateScreen() {
         Unit uLastValue = Unit.from(Unit.CELSIUS);
-        float baroMillis = temp.getBlockedValue();
-        uLastValue.setValue(baroMillis);
+        float tempDegreesC = temp.getBlockedValue();
+        uLastValue.setValue(tempDegreesC);
 
         // Create a bundle with last read (pressue)
         Bundle bundleTemp = new Bundle();
@@ -162,7 +162,7 @@ class TempWidget extends BaseWidget {
 
     @Override
     public int getPreviewUri() {
-        return R.drawable.swidgets_baro;
+        return R.drawable.swidgets_temp;
     }
 
     @Override

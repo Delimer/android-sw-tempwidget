@@ -16,7 +16,7 @@
         CLICK: Refresh and switch between relative/absolute height.\n
         LONG CLICK: nothing.\n\n
         
-        The widget is only compatible with WidgetAPI 3 and up</string>
+        The widget is only compatible with WidgetAPI 3 and up and requires your device to have an ambient temperature sensor.</string>
     <string name="def_temp">23 °C</string>
     <string name="pref_TempUnit">Temperature Unit</string>
     <string name="pref_TempUnit_default">CELSIUS</string>

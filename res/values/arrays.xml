@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <array name="pref_BaroUnit_entries">
-        <item>Degrees Celsius [°C]</item>
+    <array name="pref_TempUnit_entries">
+        <item>Celsius [°C]</item>
         <item>Fahrenheit [°F]</item>
         <item>Kelvin [K]</item>
-        <item>Rankine [°R]</item>
     </array>
-    <array name="pref_BaroUnit_values">
+    <array name="pref_TempUnit_values">
         <item>CELSIUS</item>
         <item>FAHRENHEIT</item>
         <item>KELVIN</item>
-        <item>RANKINE</item>
     </array>
 
 </resources>

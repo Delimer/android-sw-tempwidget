@@ -7,9 +7,8 @@ import android.content.Context;
 import android.content.SharedPreferences.Editor;
 import android.util.Log;
 import de.uvwxy.helper.IntentTools;
-import de.uvwxy.sensors.BarometerReader;
-import de.uvwxy.sensors.TemperatureReader;
 import de.uvwxy.sensors.SensorReader.SensorResultCallback;
+import de.uvwxy.sensors.TemperatureReader;
 
 public class TempLogic {
     private static final String TEMP_WIDGET_SETTINGS = "TEMP_SETTINGS";
