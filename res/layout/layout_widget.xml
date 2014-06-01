@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- px is used since this is a layout for the accessory display. -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/transparent"
+    android:gravity="center"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    tools:ignore="PxUsage,Overdraw" >
+
+    <TextView
+        android:id="@+id/tvTemp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3px"
+        android:layout_width="wrap_content"
+        android:text="@string/def_pressure"
+        android:textColor="@color/smart_watch_text_color_white"
+        android:textSize="@dimen/font_size" />
+</RelativeLayout>

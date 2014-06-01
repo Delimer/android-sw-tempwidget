@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Read me -->
+    <Preference
+        android:key="@string/preference_key_read_me"
+        android:title="@string/preference_option_read_me" />
+    <ListPreference
+        android:key="baro_unit"
+        android:title="@string/pref_BaroUnit"
+        android:dialogTitle="@string/pref_BaroUnit"
+        android:entries="@array/pref_BaroUnit_entries"
+        android:entryValues="@array/pref_BaroUnit_values"
+        android:defaultValue="@string/pref_BaroUnit_default" />
+    <ListPreference
+        android:key="length_unit"
+        android:title="@string/pref_LengthUnit"
+        android:dialogTitle="@string/pref_LengthUnit"
+        android:entries="@array/pref_LengthUnit_entries"
+        android:entryValues="@array/pref_LengthUnit_values"
+        android:defaultValue="@string/pref_LengthUnit_default" />
+</PreferenceScreen>
