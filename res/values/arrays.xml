@@ -2,38 +2,16 @@
 <resources>
 
     <array name="pref_BaroUnit_entries">
-        <item>Millibar [mbar]</item>
-        <item>Bar [bar]</item>
-        <item>Pascal [Pa]</item>
-        <item>Hecto Pascal [hPa]</item>
-        <item>Technical atmosphere [at]</item>
-        <item>Standard atmosphere [atm]</item>
-        <item>Torr [Torr]</item>
-        <item>Pounds per square inch [psi]</item>
+        <item>Degrees Celsius [°C]</item>
+        <item>Fahrenheit [°F]</item>
+        <item>Kelvin [K]</item>
+        <item>Rankine [°R]</item>
     </array>
     <array name="pref_BaroUnit_values">
-        <item>MILLI_BAR</item>
-        <item>BAR</item>
-        <item>PASCAL</item>
-        <item>HECTO_PASCAL</item>
-        <item>TECHNICAL_ATMOSPHERE</item>
-        <item>STANDARD_ATMOSPHERE</item>
-        <item>TORR</item>
-        <item>POUNDS_PER_SQUARE_INCH</item>
-    </array>
-    <array name="pref_LengthUnit_entries">
-        <item>Metres [m]</item>
-        <item>Kilometres [km]</item>
-        <item>Foot [ft]</item>
-        <item>Miles [mi]</item>
-        <item>Yards [yds]</item>
-    </array>
-    <array name="pref_LengthUnit_values">
-        <item>METRE</item>
-        <item>KILOMETRE</item>
-        <item>FOOT</item>
-        <item>MILE</item>
-        <item>YARD</item>
+        <item>CELSIUS</item>
+        <item>FAHRENHEIT</item>
+        <item>KELVIN</item>
+        <item>RANKINE</item>
     </array>
 
 </resources>

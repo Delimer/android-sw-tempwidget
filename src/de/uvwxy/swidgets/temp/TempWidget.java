@@ -42,8 +42,6 @@ import com.sonyericsson.extras.liveware.aef.control.Control;
 import com.sonyericsson.extras.liveware.aef.widget.Widget;
 import com.sonyericsson.extras.liveware.extension.util.widget.BaseWidget;
 
-import de.uvwxy.sensors.BarometerReader;
-import de.uvwxy.swidgets.temp.R;
 import de.uvwxy.units.Unit;
 
 /**
@@ -58,7 +56,6 @@ class TempWidget extends BaseWidget {
     private int longClickCount = 0;
 
     String unitTemp = "CELSIUS";
-    String unitLength = "METRE";
 
     private TempLogic temp;
     private TempWidgetRegistrationInformation tempRegInfo;
@@ -84,13 +81,11 @@ class TempWidget extends BaseWidget {
         restartRefreshLoop(0, true);
 
         prefs = PreferenceManager.getDefaultSharedPreferences(mContext);
-        unitTemp = prefs.getString("baro_unit", "MILLI_BAR");
-        unitLength = prefs.getString("length_unit", "METRE");
+        unitTemp = prefs.getString("temp_unit", "CELSIUS");
 
         listener = new SharedPreferences.OnSharedPreferenceChangeListener() {
             public void onSharedPreferenceChanged(SharedPreferences prefs, String key) {
-                unitTemp = prefs.getString("baro_unit", "MILLI_BAR");
-                unitLength = prefs.getString("length_unit", "METRE");
+                unitTemp = prefs.getString("temp_unit", "CELSIUS");
             }
         };
 
@@ -108,7 +103,6 @@ class TempWidget extends BaseWidget {
     @Override
     public void onTouch(final int type, final int x, final int y) {
         Log.d(TempWidgetExtensionService.LOG_TAG, "onTouch() " + type + "/" + longClickCount);
-        float baroMillis = temp.getBlockedValue();
         switch (type) {
         case 0:
             restartRefreshLoop(0, true);
@@ -140,16 +134,9 @@ class TempWidget extends BaseWidget {
     }
 
     private void updateScreen() {
-        Unit uLastValue = Unit.from(Unit.MILLI_BAR);
+        Unit uLastValue = Unit.from(Unit.CELSIUS);
         float baroMillis = temp.getBlockedValue();
         uLastValue.setValue(baroMillis);
-
-        Unit uLastHeight = Unit.from(Unit.METRE);
-        if (temp.getValueRelative() > 0) {
-            uLastHeight.setValue(BarometerReader.getHeightFromDiff(baroMillis, temp.getValueRelative()));
-        } else {
-            uLastHeight.setValue(BarometerReader.getHeight(baroMillis));
-        }
 
         // Create a bundle with last read (pressue)
         Bundle bundleTemp = new Bundle();

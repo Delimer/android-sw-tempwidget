@@ -8,6 +8,7 @@ import android.content.SharedPreferences.Editor;
 import android.util.Log;
 import de.uvwxy.helper.IntentTools;
 import de.uvwxy.sensors.BarometerReader;
+import de.uvwxy.sensors.TemperatureReader;
 import de.uvwxy.sensors.SensorReader.SensorResultCallback;
 
 public class TempLogic {
@@ -27,7 +28,7 @@ public class TempLogic {
         }
     };
 
-    private BarometerReader baroReader;
+    private TemperatureReader tempReader;
 
     private float value = 0f;
 
@@ -50,11 +51,11 @@ public class TempLogic {
     }
 
     public float getBlockedValue() {
-        if (baroReader == null) {
+        if (tempReader == null) {
             // -2 stops reader after every start
-            baroReader = new BarometerReader(mContext, -2, cb);
+            tempReader = new TemperatureReader(mContext, -2, cb);
         }
-        baroReader.startReading();
+        tempReader.startReading();
         Log.d(TempWidgetExtensionService.LOG_TAG, "locked for value");
         lock.tryLock();
         Log.d(TempWidgetExtensionService.LOG_TAG, "unlocked");

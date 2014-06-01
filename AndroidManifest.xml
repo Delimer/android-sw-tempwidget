@@ -6,7 +6,7 @@
     package="de.uvwxy.swidgets.temp" >
 
     <uses-sdk
-        android:minSdkVersion="7"
+        android:minSdkVersion="14"
         android:targetSdkVersion="19" />
 
     <uses-feature

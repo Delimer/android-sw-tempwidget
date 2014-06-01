@@ -38,7 +38,7 @@ import com.sonyericsson.extras.liveware.extension.util.registration.Registration
 
 public class TempWidgetExtensionService extends ExtensionService {
 
-    public static final String LOG_TAG = "uvwxybaro";
+    public static final String LOG_TAG = "uvwxytemp";
 
     public TempWidgetExtensionService() {
         super();
@@ -47,7 +47,7 @@ public class TempWidgetExtensionService extends ExtensionService {
     @Override
     public void onCreate() {
         super.onCreate();
-        Log.d(LOG_TAG, "BaroWidgetExtensionService: onCreate");
+        Log.d(LOG_TAG, "TempWidgetExtensionService: onCreate");
     }
 
     @Override
